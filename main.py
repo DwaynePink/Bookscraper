@@ -11,11 +11,11 @@ book_title_element = soup.find('h1')
 book_title = book_title_element.text.strip() if book_title_element else "Unknown Title"
 product_page_url = (URL)
 review_rating_element = soup.find('p', class_='star-rating')
-review_rating = review_rating_element['class'][1] if review_rating_element else None
+review_rating = review_rating_element['class'][1] if review_rating_element else "Unknown Rating"
 category_element  = soup.find_all('ul', class_='breadcrumb')
 category = category_element[0].find('a', href="../category/books/business_35/index.html").text.strip() if category_element else None
 description_element = soup.find('meta', attrs={'name': 'description'})
-description = description_element.get('content') if description_element else None
+description = description_element.get('content') if description_element else "Unknown Description"
 
 
 table_data = {}
