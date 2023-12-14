@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+from urllib.parse import urljoin
 
 URL = "http://books.toscrape.com/catalogue/the-dirty-little-secrets-of-getting-your-dream-job_994/index.html"
 page = requests.get(URL)
@@ -72,18 +73,26 @@ for row in rows:
         else:
             availability = "unknown"
 
-print(book_title)
-print(product_page_url)
-print(review_rating)#
-print(category)
-print(upc)
-print(price_excl_tax)
-print(price_incl_tax)
-print(availability)
-print(description)
+img_url_element = soup.find('div', class_='item active').find('img')
+
+if img_url_element:
+    img_url = urljoin(URL, img_url_element['src'])
+else:
+    img_url = "Unknown Image URL"
 
 
-#image file contained in here
-#description = soup.find('article', class_=('product_page'))
+#print(img_url_element)
 
+
+
+#print("book_title)
+#print(img_url)
+# #print(product_page_url)
+#print(review_rating)#
+#print(category)
+#print(upc)
+#print(price_excl_tax)
+#print(price_incl_tax)
+#print(availability)
+#print(description)
 
