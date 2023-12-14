@@ -18,7 +18,49 @@ description_element = soup.find('meta', attrs={'name': 'description'})
 description = description_element.get('content') if description_element else None
 
 
-#description = soup.find('article', class_=('product_page'))
+table_data = {}
+rows = soup.find_all('tr')
+
+for row in rows:
+    # Find the <th> element within the current <tr>
+    header = row.find('th')
+
+    # If <th> exists and its text is 'UPC', then proceed
+    if header and header.text.strip() == 'UPC':
+        # Find the corresponding <td> element
+        data = row.find('td')
+
+        # If <td> exists, extract the content
+        if data:
+            upc = data.text.strip()
+            table_data['UPC'] = upc
+
+    # If <th> exists and its text is 'Price (excl. tax)', then proceed
+    if header and header.text.strip() == 'Price (excl. tax)':
+        # Find the corresponding <td> element
+        data = row.find('td')
+
+        # If <td> exists, extract the content
+        if data:
+            price_excl_tax = data.text.strip()
+            table_data['Price (excl. tax)'] = price_excl_tax
+
+print(upc)
+print(price_excl_tax)
+
+
+
+
+
+#upc_element = soup.find('th', string="UPC")
+#c = soup.find('table', class_=('table table-striped')
+
+
+#print(c)
+#print(upc_element)
+
+#upc_element = soup.find_all('table', class_=("table table-striped"))
+#upc = upc_element ()
 
 
 
@@ -28,7 +70,7 @@ description = description_element.get('content') if description_element else Non
 
 #print(book_title)
 #print(product_page_url)
-#print(review_rating)
+#print(review_rating)#
 #print(category)
 #print(description)
 
