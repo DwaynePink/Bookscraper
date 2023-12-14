@@ -34,6 +34,8 @@ for row in rows:
         if data:
             upc = data.text.strip()
             table_data['UPC'] = upc
+        else:
+            upc = "unknown"
 
     # If <th> exists and its text is 'Price (excl. tax)', then proceed
     if header and header.text.strip() == 'Price (excl. tax)':
@@ -44,6 +46,8 @@ for row in rows:
         if data:
             price_excl_tax = data.text.strip()
             table_data['Price (excl. tax)'] = price_excl_tax
+        else:
+            price_excl_tax = "unknown"
 
     # If <th> exists and its text is 'Price (incl. tax)', then proceed
     if header and header.text.strip() == 'Price (incl. tax)':
@@ -54,6 +58,8 @@ for row in rows:
         if data:
             price_incl_tax = data.text.strip()
             table_data['Price (incl. tax)'] = price_incl_tax
+        else:
+            price_incl_tax = "unknown"
 
     if header and header.text.strip() == 'Availability':
         # Find the corresponding <td> element
@@ -63,18 +69,18 @@ for row in rows:
         if data:
             availability = data.text.strip()
             table_data['Availability'] = availability
+        else:
+            availability = "unknown"
 
-
-#print(book_title)
-#print(product_page_url)
-#print(review_rating)#
-#print(category)
-#print(description)
-#print(upc)
-#print(price_excl_tax)
-#print(price_incl_tax)
-#print(availability)
-
+print(book_title)
+print(product_page_url)
+print(review_rating)#
+print(category)
+print(upc)
+print(price_excl_tax)
+print(price_incl_tax)
+print(availability)
+print(description)
 
 
 #image file contained in here
