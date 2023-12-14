@@ -5,7 +5,7 @@ URL = "http://books.toscrape.com/catalogue/the-dirty-little-secrets-of-getting-y
 page = requests.get(URL)
 soup = BeautifulSoup(page.content, "html.parser")
 
-desired_fields = ["book_title", "product_page_url", "review_rating", "category",]
+desired_fields = ["book_title", "product_page_url", "review_rating", "category", "description", "upc", "price_excl_tax", "price_incl_tax", "availability"]
 
 book_title_element = soup.find('h1')
 book_title = book_title_element.text.strip() if book_title_element else "Unknown Title"
@@ -45,27 +45,24 @@ for row in rows:
             price_excl_tax = data.text.strip()
             table_data['Price (excl. tax)'] = price_excl_tax
 
-print(upc)
-print(price_excl_tax)
+    # If <th> exists and its text is 'Price (incl. tax)', then proceed
+    if header and header.text.strip() == 'Price (incl. tax)':
+        # Find the corresponding <td> element
+        data = row.find('td')
 
+        # If <td> exists, extract the content
+        if data:
+            price_incl_tax = data.text.strip()
+            table_data['Price (incl. tax)'] = price_incl_tax
 
+    if header and header.text.strip() == 'Availability':
+        # Find the corresponding <td> element
+        data = row.find('td')
 
-
-
-#upc_element = soup.find('th', string="UPC")
-#c = soup.find('table', class_=('table table-striped')
-
-
-#print(c)
-#print(upc_element)
-
-#upc_element = soup.find_all('table', class_=("table table-striped"))
-#upc = upc_element ()
-
-
-
-
-
+        # If <td> exists, extract the content
+        if data:
+            availability = data.text.strip()
+            table_data['Availability'] = availability
 
 
 #print(book_title)
@@ -73,8 +70,10 @@ print(price_excl_tax)
 #print(review_rating)#
 #print(category)
 #print(description)
-
-
+#print(upc)
+#print(price_excl_tax)
+#print(price_incl_tax)
+#print(availability)
 
 
 
