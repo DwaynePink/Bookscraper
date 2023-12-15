@@ -31,4 +31,4 @@ while current_url:
 # Print the list of collected URLs vertically
 for url in urls_visited:
     print(url)
-
+#
