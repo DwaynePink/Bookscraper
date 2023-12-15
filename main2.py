@@ -22,4 +22,13 @@ def extract_urls(page_url):
 
     return next_page_url
 
+current_url = start_url
+
+# add to function to make sure pagination
+while current_url:
+    current_url = extract_urls(current_url)
+
+# Print the list of collected URLs vertically
+for url in urls_visited:
+    print(url)
 
