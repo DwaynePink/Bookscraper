@@ -11,7 +11,7 @@ urls_visited = []
 
 # Function to extract URLs from a page
 def extract_urls(page_url):
-    page = requests.get(page_url)
+    page = requests.get(page_url), timeout=250)  # adjust the timeout value
     soup = BeautifulSoup(page.content, "html.parser")
 
     # Extract URLs for category
@@ -24,6 +24,7 @@ def extract_urls(page_url):
 
     return next_page_url
 
+# Start with the initial URL
 current_url = start_url
 
 # Continue extracting URLs until there are no more next pages
@@ -34,14 +35,17 @@ while current_url:
 csv_file_path = "book_data.csv"
 fieldnames = ["book_title", "product_page_url", "review_rating", "category", "description", "upc", "price_excl_tax", "price_incl_tax", "availability", "img_url"]
 
+# Open the CSV file for writing
 with open(csv_file_path, mode='w', newline='', encoding='utf-8') as csv_file:
+    # Create CSV writer object
     writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
+
     # Write the header row
     writer.writeheader()
 
     # Iterate over each URL and extract details
     for url in urls_visited:
-        page = requests.get(url)
+        page = requests.get(url), timeout=500)  # adjust the timeout value
         soup = BeautifulSoup(page.content, "html.parser")
 
         # Extract details for the individual book
@@ -52,6 +56,7 @@ with open(csv_file_path, mode='w', newline='', encoding='utf-8') as csv_file:
         review_rating = review_rating_element['class'][1] if review_rating_element else "Unknown Rating"
         category_element = soup.find('ul', class_='breadcrumb')
         category = category_element.find('a', href=lambda x: x and x.startswith("../category/")).text.strip() if category_element else None
+
         description_element = soup.find('meta', attrs={'name': 'description'})
         description = description_element.get('content') if description_element else "Unknown Description"
 
