@@ -4,17 +4,17 @@ from urllib.parse import urljoin
 import csv
 
 # Starting URL for a specific category
-start_url = "http://books.toscrape.com/catalogue/category/books/travel_2/index.html"
+start_url = "http://books.toscrape.com/catalogue/category/books_1/index.html"
 
-# List to store visited URLs- to prevent duplication of data
+# List to store visited URLs
 urls_visited = []
 
 # Function to extract URLs from a page
 def extract_urls(page_url):
-    page = requests.get(page_url), timeout=250)  # adjust the timeout value
+    page = requests.get(page_url, timeout=90)  # adjust the timeout value
     soup = BeautifulSoup(page.content, "html.parser")
 
-    # Extract URLs for category
+    # Extract URLs only from the specified category
     category_urls = [urljoin(page_url, link.get('href')) for link in soup.select('h3 a') if link.get('href')]
     urls_visited.extend(category_urls)
 
@@ -32,20 +32,21 @@ while current_url:
     current_url = extract_urls(current_url)
 
 # Create CSV file for saving data
-csv_file_path = "book_data.csv"
-fieldnames = ["book_title", "product_page_url", "review_rating", "category", "description", "upc", "price_excl_tax", "price_incl_tax", "availability", "img_url"]
+main_csv_path = "book_data.csv"
+fieldnames = ["book_title", "product_page_url", "review_rating", "category", "description", "upc", "price_excl_tax",
+              "price_incl_tax", "availability", "img_url"]
 
-# Open the CSV file for writing
-with open(csv_file_path, mode='w', newline='', encoding='utf-8') as csv_file:
+# Open the main CSV file for writing
+with open(main_csv_path, mode='w', newline='', encoding='utf-8') as main_csv:
     # Create CSV writer object
-    writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
+    main_writer = csv.DictWriter(main_csv, fieldnames=fieldnames)
 
     # Write the header row
-    writer.writeheader()
+    main_writer.writeheader()
 
     # Iterate over each URL and extract details
     for url in urls_visited:
-        page = requests.get(url), timeout=500)  # adjust the timeout value
+        page = requests.get(url, timeout=90)  # adjust the timeout value
         soup = BeautifulSoup(page.content, "html.parser")
 
         # Extract details for the individual book
@@ -55,7 +56,8 @@ with open(csv_file_path, mode='w', newline='', encoding='utf-8') as csv_file:
         review_rating_element = soup.find('p', class_='star-rating')
         review_rating = review_rating_element['class'][1] if review_rating_element else "Unknown Rating"
         category_element = soup.find('ul', class_='breadcrumb')
-        category = category_element.find('a', href=lambda x: x and x.startswith("../category/")).text.strip() if category_element else None
+        category_links = category_element.find_all('a')
+        category = category_links[2].text.strip() if len(category_links) > 2 else "Unknown Category"
 
         description_element = soup.find('meta', attrs={'name': 'description'})
         description = description_element.get('content') if description_element else "Unknown Description"
@@ -81,8 +83,8 @@ with open(csv_file_path, mode='w', newline='', encoding='utf-8') as csv_file:
         img_url_element = soup.find('div', class_='item active').find('img')
         img_url = urljoin(url, img_url_element['src']) if img_url_element else "Unknown Image URL"
 
-        # Write the data row to CSV
-        writer.writerow({
+        # Write the data row to the main CSV file
+        main_writer.writerow({
             "book_title": book_title,
             "product_page_url": product_page_url,
             "review_rating": review_rating,
@@ -95,4 +97,39 @@ with open(csv_file_path, mode='w', newline='', encoding='utf-8') as csv_file:
             "img_url": img_url
         })
 
-print(f"Data has been saved to {csv_file_path}")
+print(f"Data has been saved to {main_csv_path}")
+
+# Split the data into separate CSV files for each category
+with open(main_csv_path, mode='r', newline='', encoding='utf-8') as main_csv:
+    reader = csv.DictReader(main_csv)
+
+    # Create a dictionary to store data for each category
+    category_data = {}
+
+    # Iterate through each row in the main CSV file
+    for row in reader:
+        category = row["category"]
+
+        # Create a new CSV file for the category if it doesn't exist
+        if category not in category_data:
+            category_data[category] = []
+
+        # Add the row to the category's data
+        category_data[category].append(row)
+
+# Write data to separate CSV files for each category
+for category, data in category_data.items():
+    category_csv_path = f"{category}_data.csv"
+    fieldnames = ["book_title", "product_page_url", "review_rating", "category", "description", "upc", "price_excl_tax",
+                  "price_incl_tax", "availability", "img_url"]
+
+    with open(category_csv_path, mode='w', newline='', encoding='utf-8') as category_csv:
+        category_writer = csv.DictWriter(category_csv, fieldnames=fieldnames)
+
+        # Write the header row
+        category_writer.writeheader()
+
+        # Write data for the category
+        category_writer.writerows(data)
+
+    print(f"Data for category {category} has been saved to {category_csv_path}")
