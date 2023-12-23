@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7be0a907-d840-4b05-941d-bbb71841ae7f" name="Changes" comment="Final">
+      <change afterPath="$PROJECT_DIR$/.idea/Bookscraper.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main2.py" beforeDir="false" afterPath="$PROJECT_DIR$/main2.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Unit Test" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;DwaynePink&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="739ff2b6-9a3a-43df-8c20-6fe741f442bd" />
+        <option name="url" value="https://github.com/DwaynePink/Bookscraper.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Test - seperate csvs.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Test.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2ZT4j7N3O0El0G3nq3Sufafit97" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.Python tests for main2.MyTestCase.executor": "Run",
+    "Python tests.Python tests for main2.MyTestCase.test_something.executor": "Run",
+    "Python.All URLS.executor": "Run",
+    "Python.Bookscraper.executor": "Run",
+    "Python.ImageExtractor.executor": "Run",
+    "Python.Test - seperate csvs.executor": "Run",
+    "Python.Test.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.main2.executor": "Run",
+    "Python.main3.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/dwayn/PycharmProjects/Bookscraper/Unneeded files/Test.py",
+    "settings.editor.selected.configurable": "advanced.settings"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "Python"
+    ]
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Bookscraper" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Bookscraper" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Bookscraper" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main3.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for main2.MyTestCase" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Bookscraper" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;main2.MyTestCase&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for main2.MyTestCase.test_something" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Bookscraper" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;main2.MyTestCase.test_something&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main3" />
+        <item itemvalue="Python.main2" />
+        <item itemvalue="Python tests.Python tests for main2.MyTestCase.test_something" />
+        <item itemvalue="Python tests.Python tests for main2.MyTestCase" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-67fca87a943a-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.11799.259" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7be0a907-d840-4b05-941d-bbb71841ae7f" name="Changes" comment="" />
+      <created>1702432868484</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1702432868484</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Book title, product page url and review ratings code added. print function to verify">
+      <option name="closed" value="true" />
+      <created>1702504801703</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1702504801703</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Updated additional categories">
+      <option name="closed" value="true" />
+      <created>1702507785880</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1702507785880</updated>
+    </task>
+    <task id="LOCAL-00003" summary="extracted table content. only 2 updated so far">
+      <option name="closed" value="true" />
+      <created>1702525623743</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1702525623743</updated>
+    </task>
+    <task id="LOCAL-00004" summary="code extracts all data correctly.">
+      <option name="closed" value="true" />
+      <created>1702526788369</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1702526788369</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Build in Else statements to insure if no value exist that the code still functions.">
+      <option name="closed" value="true" />
+      <created>1702571504606</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1702571504606</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Defined each Else Statement">
+      <option name="closed" value="true" />
+      <created>1702571695966</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1702571695966</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Code complete with image URL">
+      <option name="closed" value="true" />
+      <created>1702574868402</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1702574868402</updated>
+    </task>
+    <task id="LOCAL-00008" summary="start and build base for the category code to extract HTML for single category">
+      <option name="closed" value="true" />
+      <created>1702599291743</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1702599291743</updated>
+    </task>
+    <task id="LOCAL-00009" summary="extract URL for category. and check if there is a next link on page.">
+      <option name="closed" value="true" />
+      <created>1702616760958</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1702616760958</updated>
+    </task>
+    <task id="LOCAL-00010" summary="extract URL for category. and check if there is a next link on page.">
+      <option name="closed" value="true" />
+      <created>1702617076957</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1702617076957</updated>
+    </task>
+    <task id="LOCAL-00011" summary="make sure code checks for additional pages.">
+      <option name="closed" value="true" />
+      <created>1702617124366</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1702617124366</updated>
+    </task>
+    <task id="LOCAL-00012" summary="make sure code checks for additional pages.">
+      <option name="closed" value="true" />
+      <created>1702668849279</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1702668849279</updated>
+    </task>
+    <task id="LOCAL-00013" summary="change UR to main URL page to extract all URLS in all categories. Define soup find. use same code start from the combined main and main 2.">
+      <option name="closed" value="true" />
+      <created>1702668966394</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1702668966394</updated>
+    </task>
+    <task id="LOCAL-00014" summary="added timeout. Lossing connection during program run. Trouble shootings close out. added notes.">
+      <option name="closed" value="true" />
+      <created>1702938919312</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1702938919312</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Added final script to take the full scrape csv and convert to seperate CSV files per category.">
+      <option name="closed" value="true" />
+      <created>1702953739543</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1702953739543</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Renamed final project script">
+      <option name="closed" value="true" />
+      <created>1702959548634</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1702959548634</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Renamed final project script">
+      <option name="closed" value="true" />
+      <created>1703012182700</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1703012182700</updated>
+    </task>
+    <task id="LOCAL-00018" summary="create image directory, set function">
+      <option name="closed" value="true" />
+      <created>1703293137657</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1703293137657</updated>
+    </task>
+    <task id="LOCAL-00019" summary="extract 'img' structure from website. &#10;You url join to extract full html to get the correct image url for extraction">
+      <option name="closed" value="true" />
+      <created>1703293481626</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1703293481626</updated>
+    </task>
+    <task id="LOCAL-00020" summary="download images and iterate for all categories">
+      <option name="closed" value="true" />
+      <created>1703293688822</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1703293688822</updated>
+    </task>
+    <task id="LOCAL-00021" summary="added import OS to add the image extraction script from image extractor. Combined both scripts to be more efficent adn complete all tasks at once.">
+      <option name="closed" value="true" />
+      <created>1703336366918</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1703336366918</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Added Readme file">
+      <option name="closed" value="true" />
+      <created>1703340976110</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1703340976110</updated>
+    </task>
+    <task id="LOCAL-00023" summary="added requirements file">
+      <option name="closed" value="true" />
+      <created>1703341006769</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1703341006769</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Final">
+      <option name="closed" value="true" />
+      <created>1703341021820</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1703341021820</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Book title, product page url and review ratings code added. print function to verify" />
+    <MESSAGE value="Updated additional categories" />
+    <MESSAGE value="extracted table content. only 2 updated so far" />
+    <MESSAGE value="code extracts all data correctly." />
+    <MESSAGE value="Build in Else statements to insure if no value exist that the code still functions." />
+    <MESSAGE value="Defined each Else Statement" />
+    <MESSAGE value="Code complete with image URL" />
+    <MESSAGE value="start and build base for the category code to extract HTML for single category" />
+    <MESSAGE value="extract URL for category. and check if there is a next link on page." />
+    <MESSAGE value="make sure code checks for additional pages." />
+    <MESSAGE value="change UR to main URL page to extract all URLS in all categories. Define soup find. use same code start from the combined main and main 2." />
+    <MESSAGE value="added timeout. Lossing connection during program run. Trouble shootings close out. added notes." />
+    <MESSAGE value="Added final script to take the full scrape csv and convert to seperate CSV files per category." />
+    <MESSAGE value="Renamed final project script" />
+    <MESSAGE value="create image directory, set function" />
+    <MESSAGE value="extract 'img' structure from website. &#10;You url join to extract full html to get the correct image url for extraction" />
+    <MESSAGE value="download images and iterate for all categories" />
+    <MESSAGE value="added import OS to add the image extraction script from image extractor. Combined both scripts to be more efficent adn complete all tasks at once." />
+    <MESSAGE value="Added Readme file" />
+    <MESSAGE value="added requirements file" />
+    <MESSAGE value="Final" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final" />
+  </component>
+</project>
