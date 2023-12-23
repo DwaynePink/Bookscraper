@@ -33,7 +33,7 @@ while current_url:
     current_url = extract_urls(current_url)
 
 # Create CSV file for saving data
-main_csv_path = "book_data.csv"
+main_csv_path = "Combined_data.csv"
 fieldnames = ["book_title", "product_page_url", "review_rating", "category", "description", "upc", "price_excl_tax",
               "price_incl_tax", "availability", "img_url"]
 
