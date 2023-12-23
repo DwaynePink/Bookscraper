@@ -2,16 +2,17 @@ import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 import csv
+import os
 
 # Starting URL for a specific category
-start_url = "http://books.toscrape.com/catalogue/category/books_1/index.html"
+start_url = "http://books.toscrape.com/catalogue/category/books_1/"
 
 # List to store visited URLs
 urls_visited = []
 
 # Function to extract URLs from a page
 def extract_urls(page_url):
-    page = requests.get(page_url, timeout=90)  # adjust the timeout value
+    page = requests.get(page_url, timeout=120)  # adjust the timeout value
     soup = BeautifulSoup(page.content, "html.parser")
 
     # Extract URLs only from the specified category
@@ -133,3 +134,28 @@ for category, data in category_data.items():
         category_writer.writerows(data)
 
     print(f"Data for category {category} has been saved to {category_csv_path}")
+
+# Function to download images from a page
+
+# Create a directory to store downloaded images
+image_directory = "images"
+os.makedirs(image_directory, exist_ok=True)
+def download_images(page_url):
+    page = requests.get(page_url, timeout=120)
+    soup = BeautifulSoup(page.content, "html.parser")
+
+    # Extract image URLs from the page
+    img_elements = soup.select('img')
+    img_urls = [urljoin(page_url, img['src']) for img in img_elements]
+
+# Download images
+    for img_url in img_urls:
+        img_data = requests.get(img_url, timeout=120).content
+        img_name = os.path.join(image_directory, os.path.basename(img_url))
+        with open(img_name, 'wb') as img_file:
+            img_file.write(img_data)
+
+# Iterate through all category pages
+for page_number in range(1, 60):  # account for additional pages that maybe be added in the future
+    category_url = f"{start_url}page-{page_number}.html"
+    download_images(category_url)
