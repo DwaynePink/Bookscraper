@@ -18,3 +18,16 @@ def download_images(page_url):
     # Extract image URLs from the page
     img_elements = soup.select('img')
     img_urls = [urljoin(page_url, img['src']) for img in img_elements]
+
+    # Download images
+    for img_url in img_urls:
+        img_data = requests.get(img_url, timeout=120).content
+        img_name = os.path.join(image_directory, os.path.basename(img_url))
+        with open(img_name, 'wb') as img_file:
+            img_file.write(img_data)
+
+# Iterate through all category pages
+for page_number in range(1, 60):  # account for additional pages that maybe be added in the future
+    category_url = f"{base_url}page-{page_number}.html"
+    download_images(category_url)
+
