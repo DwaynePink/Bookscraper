@@ -5,3 +5,9 @@ import os
 
 # Base URL for the website
 base_url = "http://books.toscrape.com/catalogue/category/books_1/"
+
+# Create a directory to store downloaded images
+image_directory = "images"
+os.makedirs(image_directory, exist_ok=True)
+
+# Function to download images from a page
