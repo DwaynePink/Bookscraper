@@ -3,7 +3,7 @@ Bookscraper is a tool designed to extract book information from a website, organ
 
 ## Prerequisites
 
-Before using Bookscraper, make sure you have the following:
+Before using Bookscraper, make sure you have the following
 
 - Python installed
 - An integrated development environment (IDE) of your choice
@@ -15,9 +15,9 @@ Before using Bookscraper, make sure you have the following:
 
 Create directory by typing in gitbash  -  
      mkdir bookscraper
-Move into that folder - C:\Users\dwayn\   ***note dwayn will be your own and not dwayn
+Move into that folder - CUsersdwayn   note dwayn will be your own and not dwayn
     cd bookscraper
-You will now be in the folder which will look like this C:\Users\dwayn\bookscraper
+You will now be in the folder which will look like this CUsersdwaynbookscraper
 
 ## Step 2 Create the Virtual Environment
 Create the virtual environment
@@ -26,7 +26,7 @@ Type = python -m venv
 the subdirectory will appear, meaning environment has been created. 
 
 Now Activate the Virtual Environment
-type = source venv/Scripts/activate
+type = source venvScriptsactivate
 You will now see a (venv) in front of your sub directory
 Congrats you are in your virtual environment.
 
@@ -44,5 +44,4 @@ Make sure you have a copy of the bookscraper.py file in the folder to enusre you
 Finally, 
 Type python bookscraper.py
 
-******Congrats you have extracted all your data. ********
-
+Congrats you have extracted all your data. 
